@@ -24,11 +24,35 @@ class MainController: UIViewController {
             hoursTable.reloadData()
         }
     }
-        
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        hoursTable.register(TaskShortInfoCell.self)
+        hoursTable.dataSource = self
+        hoursTable.delegate = self
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        setHoursTable()
+    }
+    
+    func setHoursTable() {
         currentDate = self.calendar.date(byAdding: .day, value: 0, to: self.calendar.startOfDay(for: self.calendarDatePicker.date)) ?? self.calendarDatePicker.date
+        getTasks()
+    }
+    
+    func getTasks() {
+        
+        var resault: [TaskModel]
+        resault = DatabaseService.database.readByDate(filter: "day", date: currentDate)
+        
+        if resault.isEmpty {
+            guard let testTask: TaskModel = ProjectActions.shared.getJSONFile(fileName: "TestTask") else { return }
+            resault.append(testTask)
+        }
+        tasks = resault
     }
     
     private func findTask(index: Int) -> TaskModel? {
@@ -45,7 +69,7 @@ class MainController: UIViewController {
         }
         
         return result
-    }    
+    }
     
     @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
         
