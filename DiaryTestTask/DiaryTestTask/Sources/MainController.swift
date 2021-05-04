@@ -76,7 +76,7 @@ class MainController: UIViewController {
     }
     
     @IBAction func currentDateChange(_ sender: UIDatePicker) {
-        
+        setHoursTable()
     }
 }
 
@@ -98,5 +98,9 @@ extension MainController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         hoursTable.deselectRow(at: indexPath, animated: true)
+        
+        let taskMoreInfoController = TaskMoreInfoController()
+        taskMoreInfoController.taskInfo = findTask(index: indexPath.row)
+        present(taskMoreInfoController, animated: true, completion: nil)
     }
 }

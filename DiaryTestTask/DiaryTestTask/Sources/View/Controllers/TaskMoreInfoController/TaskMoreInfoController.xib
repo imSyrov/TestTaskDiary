@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TaskMoreInfoController" customModule="DiaryTestTask" customModuleProvider="target">
+            <connections>
+                <outlet property="descriptionTextView" destination="x3L-M2-cqq" id="Ae4-dR-Dai"/>
+                <outlet property="finishTaskLabel" destination="bwM-ak-m8V" id="RKf-s9-37C"/>
+                <outlet property="startTaskLabel" destination="k1U-Wd-oGF" id="blc-tE-QRu"/>
+                <outlet property="taskNameLabel" destination="bXF-Wf-QyE" id="LUU-8c-qQC"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Task Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bXF-Wf-QyE">
+                    <rect key="frame" x="10" y="5" width="355" height="30"/>
+                    <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vGu-z3-uMJ">
+                    <rect key="frame" x="10" y="45" width="355" height="24"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="x3L-M2-cqq">
+                    <rect key="frame" x="10" y="74" width="355" height="172"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                    <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start task:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k1U-Wd-oGF">
+                    <rect key="frame" x="10" y="256" width="355" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Finish task:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bwM-ak-m8V">
+                    <rect key="frame" x="10" y="287" width="355" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wif-wU-EMw" customClass="CircleButton" customModule="DiaryTestTask" customModuleProvider="target">
+                    <rect key="frame" x="137.5" y="318" width="100" height="50"/>
+                    <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="B0Y-3S-bV5"/>
+                        <constraint firstAttribute="width" constant="100" id="FDq-tN-wzN"/>
+                    </constraints>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="OK"/>
+                    <connections>
+                        <action selector="returnToMainController:" destination="-1" eventType="touchDown" id="SS1-RW-U8x"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="vGu-z3-uMJ" firstAttribute="leading" secondItem="bXF-Wf-QyE" secondAttribute="leading" id="7Me-je-atQ"/>
+                <constraint firstItem="x3L-M2-cqq" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="9Oj-JA-LbS"/>
+                <constraint firstItem="k1U-Wd-oGF" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="FL2-eF-p1v"/>
+                <constraint firstItem="vGu-z3-uMJ" firstAttribute="top" secondItem="bXF-Wf-QyE" secondAttribute="bottom" constant="10" id="Fdi-Yb-6Rf"/>
+                <constraint firstItem="bwM-ak-m8V" firstAttribute="leading" secondItem="bXF-Wf-QyE" secondAttribute="leading" id="GNt-gu-uPk"/>
+                <constraint firstItem="bwM-ak-m8V" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="IOr-vG-LUD"/>
+                <constraint firstItem="vGu-z3-uMJ" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="Jvv-p0-6kw"/>
+                <constraint firstItem="bwM-ak-m8V" firstAttribute="top" secondItem="k1U-Wd-oGF" secondAttribute="bottom" constant="10" id="Nu4-DW-He9"/>
+                <constraint firstItem="k1U-Wd-oGF" firstAttribute="leading" secondItem="bXF-Wf-QyE" secondAttribute="leading" id="TG2-or-nk7"/>
+                <constraint firstItem="wif-wU-EMw" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="XZc-yC-sF9"/>
+                <constraint firstItem="bXF-Wf-QyE" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="5" id="hHe-k6-SmP"/>
+                <constraint firstItem="wif-wU-EMw" firstAttribute="top" secondItem="bwM-ak-m8V" secondAttribute="bottom" constant="10" id="io3-20-vW8"/>
+                <constraint firstItem="bXF-Wf-QyE" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="kRe-A9-7rU"/>
+                <constraint firstItem="x3L-M2-cqq" firstAttribute="leading" secondItem="bXF-Wf-QyE" secondAttribute="leading" id="oZD-oG-Vhh"/>
+                <constraint firstItem="k1U-Wd-oGF" firstAttribute="top" secondItem="x3L-M2-cqq" secondAttribute="bottom" constant="10" id="odQ-6x-6a9"/>
+                <constraint firstItem="bXF-Wf-QyE" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="peK-jf-j53"/>
+                <constraint firstItem="x3L-M2-cqq" firstAttribute="top" secondItem="vGu-z3-uMJ" secondAttribute="bottom" constant="5" id="rOj-1a-21R"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="wif-wU-EMw" secondAttribute="bottom" constant="299" id="vM1-LO-Wnq"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="132" y="152.47376311844079"/>
+        </view>
+    </objects>
+</document>

@@ -15,6 +15,10 @@
 		093F1C072641D6B7004AA61A /* TaskShortInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 093F1C052641D6B7004AA61A /* TaskShortInfoCell.xib */; };
 		093F1C0A2641D8CA004AA61A /* TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093F1C092641D8CA004AA61A /* TaskModel.swift */; };
 		093F1C0C2641D911004AA61A /* MaxIdModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093F1C0B2641D911004AA61A /* MaxIdModel.swift */; };
+		093F1C112641DC21004AA61A /* TaskMoreInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093F1C0F2641DC21004AA61A /* TaskMoreInfoController.swift */; };
+		093F1C122641DC21004AA61A /* TaskMoreInfoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 093F1C102641DC21004AA61A /* TaskMoreInfoController.xib */; };
+		093F1C162641E047004AA61A /* CircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093F1C152641E047004AA61A /* CircleButton.swift */; };
+		093F1C182641E10E004AA61A /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093F1C172641E10E004AA61A /* Date.swift */; };
 		09E3B0632641B60C00286CED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E3B0622641B60C00286CED /* AppDelegate.swift */; };
 		09E3B0652641B60C00286CED /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E3B0642641B60C00286CED /* SceneDelegate.swift */; };
 		09E3B06A2641B60C00286CED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09E3B0682641B60C00286CED /* Main.storyboard */; };
@@ -33,6 +37,10 @@
 		093F1C052641D6B7004AA61A /* TaskShortInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaskShortInfoCell.xib; sourceTree = "<group>"; };
 		093F1C092641D8CA004AA61A /* TaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskModel.swift; sourceTree = "<group>"; };
 		093F1C0B2641D911004AA61A /* MaxIdModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaxIdModel.swift; sourceTree = "<group>"; };
+		093F1C0F2641DC21004AA61A /* TaskMoreInfoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskMoreInfoController.swift; sourceTree = "<group>"; };
+		093F1C102641DC21004AA61A /* TaskMoreInfoController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaskMoreInfoController.xib; sourceTree = "<group>"; };
+		093F1C152641E047004AA61A /* CircleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButton.swift; sourceTree = "<group>"; };
+		093F1C172641E10E004AA61A /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		09E3B05F2641B60C00286CED /* DiaryTestTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DiaryTestTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09E3B0622641B60C00286CED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		09E3B0642641B60C00286CED /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				093F1C002641D649004AA61A /* UITableView.swift */,
+				093F1C172641E10E004AA61A /* Date.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -93,6 +102,7 @@
 		093F1C022641D683004AA61A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				093F1C0D2641DBDE004AA61A /* Controllers */,
 				093F1C032641D68E004AA61A /* Cells */,
 			);
 			path = View;
@@ -114,6 +124,39 @@
 				093F1C0B2641D911004AA61A /* MaxIdModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		093F1C0D2641DBDE004AA61A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				093F1C0E2641DC04004AA61A /* TaskMoreInfoController */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		093F1C0E2641DC04004AA61A /* TaskMoreInfoController */ = {
+			isa = PBXGroup;
+			children = (
+				093F1C0F2641DC21004AA61A /* TaskMoreInfoController.swift */,
+				093F1C102641DC21004AA61A /* TaskMoreInfoController.xib */,
+			);
+			path = TaskMoreInfoController;
+			sourceTree = "<group>";
+		};
+		093F1C132641E022004AA61A /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				093F1C142641E03B004AA61A /* Buttons */,
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
+		093F1C142641E03B004AA61A /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				093F1C152641E047004AA61A /* CircleButton.swift */,
+			);
+			path = Buttons;
 			sourceTree = "<group>";
 		};
 		09E3B0562641B60C00286CED = {
@@ -149,6 +192,7 @@
 			children = (
 				093F1BF92641D4BF004AA61A /* Project */,
 				093F1BFC2641D504004AA61A /* Database */,
+				093F1C132641E022004AA61A /* Custom */,
 				093F1BFF2641D60F004AA61A /* Extensions */,
 				093F1C082641D8A7004AA61A /* Models */,
 				093F1C022641D683004AA61A /* View */,
@@ -248,6 +292,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				093F1C072641D6B7004AA61A /* TaskShortInfoCell.xib in Resources */,
+				093F1C122641DC21004AA61A /* TaskMoreInfoController.xib in Resources */,
 				093F1BF82641CA48004AA61A /* TestTask.json in Resources */,
 				09E3B06F2641B60E00286CED /* LaunchScreen.storyboard in Resources */,
 				09E3B06C2641B60E00286CED /* Assets.xcassets in Resources */,
@@ -310,7 +355,10 @@
 				09E3B0632641B60C00286CED /* AppDelegate.swift in Sources */,
 				093F1BFE2641D526004AA61A /* Database.swift in Sources */,
 				09E3B0652641B60C00286CED /* SceneDelegate.swift in Sources */,
+				093F1C162641E047004AA61A /* CircleButton.swift in Sources */,
+				093F1C182641E10E004AA61A /* Date.swift in Sources */,
 				093F1C062641D6B7004AA61A /* TaskShortInfoCell.swift in Sources */,
+				093F1C112641DC21004AA61A /* TaskMoreInfoController.swift in Sources */,
 				093F1C0A2641D8CA004AA61A /* TaskModel.swift in Sources */,
 				093F1C012641D649004AA61A /* UITableView.swift in Sources */,
 			);
