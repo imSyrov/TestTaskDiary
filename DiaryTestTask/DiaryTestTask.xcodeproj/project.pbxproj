@@ -3,11 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		093F1BF82641CA48004AA61A /* TestTask.json in Resources */ = {isa = PBXBuildFile; fileRef = 093F1BF72641CA48004AA61A /* TestTask.json */; };
+		093F1BFB2641D4DC004AA61A /* Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093F1BFA2641D4DC004AA61A /* Actions.swift */; };
+		093F1BFE2641D526004AA61A /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093F1BFD2641D526004AA61A /* Database.swift */; };
 		09E3B0632641B60C00286CED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E3B0622641B60C00286CED /* AppDelegate.swift */; };
 		09E3B0652641B60C00286CED /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E3B0642641B60C00286CED /* SceneDelegate.swift */; };
 		09E3B06A2641B60C00286CED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09E3B0682641B60C00286CED /* Main.storyboard */; };
@@ -19,6 +21,8 @@
 
 /* Begin PBXFileReference section */
 		093F1BF72641CA48004AA61A /* TestTask.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = TestTask.json; path = ../../../../../../Downloads/TestTask.json; sourceTree = "<group>"; };
+		093F1BFA2641D4DC004AA61A /* Actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Actions.swift; sourceTree = "<group>"; };
+		093F1BFD2641D526004AA61A /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		09E3B05F2641B60C00286CED /* DiaryTestTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DiaryTestTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09E3B0622641B60C00286CED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		09E3B0642641B60C00286CED /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -52,6 +56,22 @@
 			path = Data;
 			sourceTree = "<group>";
 		};
+		093F1BF92641D4BF004AA61A /* Project */ = {
+			isa = PBXGroup;
+			children = (
+				093F1BFA2641D4DC004AA61A /* Actions.swift */,
+			);
+			path = Project;
+			sourceTree = "<group>";
+		};
+		093F1BFC2641D504004AA61A /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				093F1BFD2641D526004AA61A /* Database.swift */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
 		09E3B0562641B60C00286CED = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +103,8 @@
 		09E3B0762641B62A00286CED /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				093F1BF92641D4BF004AA61A /* Project */,
+				093F1BFC2641D504004AA61A /* Database */,
 				09E3B06D2641B60E00286CED /* LaunchScreen.storyboard */,
 				09E3B0682641B60C00286CED /* Main.storyboard */,
 				09E3B0782641B78300286CED /* MainController.swift */,
@@ -107,7 +129,6 @@
 				A2CCFCE73AD04944CE367DBD /* Pods-DiaryTestTask.debug.xcconfig */,
 				E3CC975B13FCA7781B3800B2 /* Pods-DiaryTestTask.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -236,7 +257,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				09E3B0792641B78300286CED /* MainController.swift in Sources */,
+				093F1BFB2641D4DC004AA61A /* Actions.swift in Sources */,
 				09E3B0632641B60C00286CED /* AppDelegate.swift in Sources */,
+				093F1BFE2641D526004AA61A /* Database.swift in Sources */,
 				09E3B0652641B60C00286CED /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
