@@ -100,8 +100,10 @@ extension MainController: UITableViewDelegate {
         
         hoursTable.deselectRow(at: indexPath, animated: true)
         
-        let taskMoreInfoController = TaskMoreInfoController()
-        taskMoreInfoController.taskInfo = findTask(index: indexPath.row)
-        present(taskMoreInfoController, animated: true, completion: nil)
+        if (findTask(index: indexPath.row) != nil) {
+            let taskMoreInfoController = TaskMoreInfoController()
+            taskMoreInfoController.taskInfo = findTask(index: indexPath.row)
+            present(taskMoreInfoController, animated: true, completion: nil)
+        }
     }
 }
