@@ -7,17 +7,52 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Diary-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DiaryTestTask" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainController" customModule="DiaryTestTask" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="NQz-c1-AtU">
+                                <rect key="frame" x="10" y="44" width="355" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="ZHw-vH-E0h"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="currentDateChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="KSC-Ad-sdx"/>
+                                </connections>
+                            </datePicker>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aXg-Jz-afL">
+                                <rect key="frame" x="10" y="154" width="355" height="503"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="aXg-Jz-afL" secondAttribute="bottom" constant="10" id="6Oq-MA-1Fu"/>
+                            <constraint firstItem="aXg-Jz-afL" firstAttribute="leading" secondItem="NQz-c1-AtU" secondAttribute="leading" id="7ES-ls-Wq2"/>
+                            <constraint firstItem="NQz-c1-AtU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="Am8-FE-gUm"/>
+                            <constraint firstItem="aXg-Jz-afL" firstAttribute="top" secondItem="NQz-c1-AtU" secondAttribute="bottom" constant="10" id="Gpu-QC-EUp"/>
+                            <constraint firstItem="NQz-c1-AtU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="qsE-jm-L9L"/>
+                            <constraint firstItem="NQz-c1-AtU" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="w4d-7c-gtG"/>
+                            <constraint firstItem="aXg-Jz-afL" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="y72-VO-Jkn"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="glS-Fn-X6a"/>
+                    <navigationItem key="navigationItem" title="Diary" id="glS-Fn-X6a">
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="add" id="C2i-8P-ehj">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="addButtonPressed:" destination="BYZ-38-t0r" id="qhx-dX-fsf"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="calendarDatePicker" destination="NQz-c1-AtU" id="OAy-uD-8Jk"/>
+                        <outlet property="hoursTable" destination="aXg-Jz-afL" id="tc5-5f-PY2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -30,7 +65,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1EM-ms-x75">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
