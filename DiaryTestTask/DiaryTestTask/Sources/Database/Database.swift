@@ -19,7 +19,7 @@ class DatabaseService {
     
     private init() {
         let fileURL = DatabaseService.documentDirectoryURL.appendingPathComponent("database", isDirectory: false)
-        let configuration = Realm.Configuration(fileURL: fileURL, schemaVersion: 1)
+        let configuration = Realm.Configuration(fileURL: fileURL, schemaVersion: 5)
         realm = try! Realm(configuration: configuration)
     }
     

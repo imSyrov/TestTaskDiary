@@ -72,7 +72,8 @@ class MainController: UIViewController {
     }
     
     @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
-        
+        let createTaskController = CreateTaskController()
+        navigationController?.pushViewController(createTaskController, animated: true)
     }
     
     @IBAction func currentDateChange(_ sender: UIDatePicker) {
